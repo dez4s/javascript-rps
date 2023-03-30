@@ -16,17 +16,19 @@ let cpuWins = 0;
 function game(){    
     let gameStatus = 1;
     for(let i = 1; i <= 5; i++){ 
-        playerSelection = prompt("Pick between rock paper scissors", 'Rock');   
+        playerSelection = prompt("Pick between \"Rock\", \"Paper\" or \"Scissors\"", 'Rock');   
         if (playerSelection == null){
             i = 5;
             gameStatus = 0;
         }else{
+        console.log(`Round ${i}!`);    
         playerSelection = playerSelection.toUpperCase();
         computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);     
         }     
     }
     if(gameStatus == 1){
+    console.log(`The game has ended. Here are the results:`);
     console.log(`CPU wins: ${cpuWins}`);
     console.log(`Player wins: ${playerWins}`);
     if(playerWins > cpuWins){
