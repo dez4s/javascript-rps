@@ -9,7 +9,7 @@ function getComputerChoice(){
     } else{
         return "SCISSORS";
     }
-}
+} 
 
 let playerWins = 0;
 let cpuWins = 0;
@@ -62,9 +62,6 @@ function playRound(playerSelection, computerSelection){
     }else if(playerSelection == "SCISSORS" && computerSelection == "ROCK"){
         console.log('You lose. Rock beats Scissors');
         cpuWins++;
-    }else if(playerSelection == null){
-        alert('You quit the game');
-    }
-    }
+    }}
 
 game();
