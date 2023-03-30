@@ -14,22 +14,32 @@ function getComputerChoice(){
 let playerWins = 0;
 let cpuWins = 0;
 function game(){    
+    let gameStatus = 1;
+    if(gameStatus == 1){}
     for(let i = 1; i <= 5; i++){ 
-        playerSelection = prompt("Pick between rock paper scissors", 'Rock').toUpperCase();   
+        playerSelection = prompt("Pick between rock paper scissors", 'Rock');   
+        if (playerSelection == null){
+            i = 5;
+            gameStatus = 0;
+        }else{
+        playerSelection = playerSelection.toUpperCase();
         computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);          
+        playRound(playerSelection, computerSelection);     
+        }     
     }
+    if(gameStatus == 1){
     console.log(`CPU wins: ${cpuWins}`);
     console.log(`Player wins: ${playerWins}`);
     if(playerWins > cpuWins){
-        console.log('You win the game!!!');
+        alert('You win the game!!!');
     }else if(playerWins < cpuWins){
-        console.log('You lose the game!!!');
+        alert('You lose the game!!!');
     }else{
-        console.log('It\' a TIE!');
+        alert('It\' a TIE!');
+    }}else{
+        alert('Game abandoned!');
     }
 }
-
 
 function playRound(playerSelection, computerSelection){
     if(playerSelection == computerSelection){
@@ -53,6 +63,8 @@ function playRound(playerSelection, computerSelection){
     }else if(playerSelection == "SCISSORS" && computerSelection == "ROCK"){
         console.log('You lose. Rock beats Scissors');
         cpuWins++;
+    }else if(playerSelection == null){
+        alert('You quit the game');
     }
     }
 
