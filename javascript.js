@@ -1,5 +1,5 @@
 let playerSelection;
-let computerSelection = getComputerChoice();
+let computerSelection;
 function getComputerChoice(){
     n = Math.floor(Math.random() * (3 - 1 + 1) + 1);
     if(n == 1){
