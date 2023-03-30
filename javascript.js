@@ -15,7 +15,6 @@ let playerWins = 0;
 let cpuWins = 0;
 function game(){    
     let gameStatus = 1;
-    if(gameStatus == 1){}
     for(let i = 1; i <= 5; i++){ 
         playerSelection = prompt("Pick between rock paper scissors", 'Rock');   
         if (playerSelection == null){
