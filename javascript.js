@@ -1,9 +1,9 @@
 let playerSelection;
 let computerSelection;
-function getComputerChoice(){
+function getComputerChoice() {
     n = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-    if(n == 1){
-        return "ROCK";
+    if (n == 1) {
+    return "ROCK";
     } else if(n == 2){
         return "PAPER";
     } else{
@@ -17,21 +17,21 @@ function game(){
     let gameStatus = 1;
     for(let i = 1; i <= 5; i++){ 
         playerSelection = prompt("Pick between \"Rock\", \"Paper\" or \"Scissors\"", 'Rock');   
-        if (playerSelection == null){
+        if (playerSelection == null) {
             i = 5;
             gameStatus = 0;
-        }else{
+        } else {
         console.log(`Round ${i}!`);    
         playerSelection = playerSelection.toUpperCase();
         computerSelection = getComputerChoice();
         playRound(playerSelection, computerSelection);     
         }     
     }
-    if(gameStatus == 1){
+    if (gameStatus == 1) {
     console.log(`The game has ended. Here are the results:`);
     console.log(`CPU wins: ${cpuWins}`);
     console.log(`Player wins: ${playerWins}`);
-    if(playerWins > cpuWins){
+    if (playerWins > cpuWins) {
         alert('You win the game!!!');
     }else if(playerWins < cpuWins){
         alert('You lose the game!!!');
@@ -61,9 +61,16 @@ function playRound(playerSelection, computerSelection){
     }else if(playerSelection == "ROCK" && computerSelection == "PAPER"){
         console.log('You lose. Paper beats Rock');
         cpuWins++;
-    }else if(playerSelection == "SCISSORS" && computerSelection == "ROCK"){
+    }else if (playerSelection == "SCISSORS" && computerSelection == "ROCK") {
         console.log('You lose. Rock beats Scissors');
         cpuWins++;
     }}
 
 game();
+
+
+
+
+
+
+
