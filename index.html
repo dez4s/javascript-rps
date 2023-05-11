@@ -5,11 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css"> 
-    <script src="javascript.js"></script>
+    <script src="javascript.js" defer></script>
     <title>Rock paper scissors</title>
 </head>
 <body>
-
+    <header>
+        <div id="header-container">
+            <p id="header-title">First to 5! Rock, Paper and Scissors?!</h1>
+        </div>
+    </header>
+    <section>
+        <div id="section-container">
+                <ul class="boxes">
+                    <li class="box">
+                        <img src="./imgs/rock.png" alt="" draggable="false">
+                        Rock
+                    </li>
+                    <li class="box">
+                        <img src="./imgs/paper.png" alt="" draggable="false">
+                        Paper
+                    </li>
+                    <li class="box">
+                        <img src="./imgs/scissors.png" alt="" draggable="false">
+                        Scissors
+                    </li>
+                </ul>
+        </div>
+    </section>
+    <div class="results-container">
+        <p>Make your choice!</p>
+        <div class="game-result">     
+        </div>
+        <div class="game-stats">
+        </div>
+    </div>
 </body>
 </html>
 
