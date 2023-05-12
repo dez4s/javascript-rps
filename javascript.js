@@ -33,30 +33,30 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toUpperCase();
     if (playerSelection == computerSelection) {
         playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.substring(1).toLowerCase();
-        result = `Nobody wins. Both players picked ${playerSelection}`;
+        result = `TIE! Both players picked ${playerSelection}.`;
 
     } else if (playerSelection == "SCISSORS" && computerSelection == "PAPER") {
-        result = 'You win. Scissors beats Paper';
+        result = 'You win! Scissors beats Paper.';
         playerWins++;
 
     } else if (playerSelection == "ROCK" && computerSelection == "SCISSORS") {
-        result = 'You win. Rock beats Scissors';
+        result = 'You win! Rock beats Scissors.';
         playerWins++;
 
     } else if (playerSelection == "PAPER" && computerSelection == "ROCK") {
-        result = 'You win. Paper beats Rock';
+        result = 'You win! Paper beats Rock.';
         playerWins++;
 
     } else if (playerSelection == "PAPER" && computerSelection == "SCISSORS") {
-        result = 'You lose. Scissors beats Paper';
+        result = 'You lose! Scissors beats Paper.';
         cpuWins++;
 
     } else if (playerSelection == "ROCK" && computerSelection == "PAPER") {
-        result = 'You lose. Paper beats Rock';
+        result = 'You lose! Paper beats Rock.';
         cpuWins++;
 
     } else if (playerSelection == "SCISSORS" && computerSelection == "ROCK") {
-        result = 'You lose. Rock beats Scissors';
+        result = 'You lose! Rock beats Scissors.';
         cpuWins++;
     }} 
     //     else {
@@ -78,7 +78,7 @@ function getComputerChoice() {
 
 function playGame(p, cpu) {
     const pCount = document.querySelectorAll('.game-stats p');
-    pCount[0].textContent = `P1: ${p}`;
+    pCount[0].textContent = `Player: ${p}`;
     pCount[1].textContent = `CPU: ${cpu}`;
     if (p == 5) {
         gameResult.textContent = 'Game over! Player wins!';

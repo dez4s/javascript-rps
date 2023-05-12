@@ -39,6 +39,12 @@
     padding-bottom: 10px;
 }
 
+.player {
+    width: 35px;
+    align-self: flex-start;
+    
+}
+
 section img {
     width: 175px;
 }
@@ -72,7 +78,6 @@ div.results-container {
 .game-result p {
     font-size: 19px;
     font-weight: 500;
-    font-style: italic;
 }
 
 .game-stats {
